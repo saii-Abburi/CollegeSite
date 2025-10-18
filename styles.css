@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+:root{
+    --blue-color:rgb(27, 77, 216);
+    --background-color: #fcf9eac7;
+    --brown-color:#842A3B;
+    --red-color:#ee0000;
+    --orange-color:#FF7801;
+    --white-color:#fff;
+}
+
+body{
+    background: var(--background-color);
+    font-family:'Outfit' , 'sans-serif';
+}
+
+header{
+    width: 100vw;
+    /* height: 120px; */
+    
+    font-weight: lighter;
+    font-weight: 400;
+    /* background: var(--white-color); */
+}
+
+/* header first */
+.header-first{
+    display: flex;
+    color: rgba(0, 0, 0, 0.847);
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 50px 8px 50px;
+    height: max-content;
+}
+.header-first ul{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.header-first ul li{
+    list-style: none;
+}
+.header-first ul li a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.847);
+    transition: all .2s;
+}
+.header-first ul li a:hover{
+    color: var(--orange-color);
+}
+.header-first p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-first ul li:nth-child(6) i  , .header-first i{
+    background: var(--orange-color);
+    width: 32px;
+    height: 32px;
+    margin: 2px;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-first ul li:nth-child(6) span{
+    font-size: 16px;
+}
+.header-first ul li:nth-child(6) span span{
+    color: var(--orange-color);
+    font-weight: 450;
+
+}
+.header-first ul li:nth-child(6){
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+
+
+/* header second */
+
+.header-second{
+    width: 100vw;
+    padding: 0px 40px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-second div{
+    display: flex;
+    align-items: center;
+}
+
+.header-second .h-2-left img{
+    width: 120px;
+    height: 120px;
+    user-select: none;
+}
+
+.header-second .h-2-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    user-select: none;
+}
+.header-second .h-2-right h2{
+    color: var(--orange-color);
+    font-size: 44px;
+}
+.header-second .h-2-right h3{
+    font-size: 23px;
+    font-weight: normal;
+}
+
+.header-second nav ul {
+    display: flex;
+    gap: 44px;
+}
+.header-second nav ul li{
+    list-style: none;
+    position: relative;
+
+}
+
+/* demo */
+.header-second nav ul li .menu-dropdown{
+    position: absolute;
+    padding: 22px 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    border-radius: 12px;
+    background: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateX(-50%) translateY(10px);
+}
+
+.header-second nav ul li:hover .menu-dropdown{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.menu-dropdown ol{
+    width: 200px;
+    display: block;
+}
+.menu-dropdown ol li{
+    width: max-content;
+}
+.header-second nav ul li .menu-dropdown ol li:hover::before{
+    width: 0%;
+}
+
+.menu-dropdown .dropdown-heading{
+    color: var(--orange-color);
+    font-weight: 550;
+    display: flex;
+    align-items:center;
+    gap: 8px;
+}
+
+
+
+
+/* demo ending */
+
+.header-second nav ul li a{
+    color: black;
+    text-decoration: none;
+    position: relative;
+}
+.header-second nav ul li::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 5px;
+    transition: all 0.5s;
+    background: var(--orange-color);
+}
+.header-second nav ul li:hover::before{
+    width: 100%;
+}
+
+
+.header-second .fee-payments{
+    display: flex;
+    gap: 12px;
+}
+
+.header-second .fee-payments button{
+    font-family:'Outfit' , 'sans-serif';
+    border: 2px solid var(--orange-color);
+    padding: 6px 12px;
+    font-size: 14px;
+    background: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color .5s ease-in;
+
+}
+.header-second .fee-payments .applynow:hover{
+    background-color: var(--orange-color);
+    color: white;
+}
+.header-second .fee-payments .dropdown {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+}
+
+
+
+/* Hidden dropdown menu initially */
+.header-second .fee-payments .dropdown .dropdownmenu {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    /* transform: translateX(50%); */
+    border-radius: 12px;
+    color: var(--orange-color);
+    background: white;
+    visibility: hidden;  /* hide initially */
+    opacity: 0;
+    transition: opacity 0.3s ease; /* smooth fade-in */
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 10;
+}
+
+/* Show dropdown on hover of the parent .dropdown */
+.header-second .fee-payments .dropdown:hover .dropdownmenu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.dropdown ul {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px;
+}
+
+.dropdownmenu li {
+    list-style: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.dropdownmenu li:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+}
+
+
+
+
+
+
+
+
+
+
