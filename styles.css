@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
 
 *{
     margin: 0;
@@ -9,7 +11,7 @@
 }
 :root{
     --blue-color:rgb(27, 77, 216);
-    --background-color: #fcf9eac7;
+    --background-color: #fafafa;
     --brown-color:#842A3B;
     --red-color:#ee0000;
     --orange-color:#FF7801;
@@ -18,7 +20,9 @@
 
 body{
     background: var(--background-color);
-    font-family:'Outfit' , 'sans-serif';
+    /* font-family:'Manrope' 'Outfit' , 'sans-serif'; */
+    font-family: "Manrope", sans-serif;
+    /* font-family: "Source Code Pro", monospace; */
 }
 
 header{
@@ -92,11 +96,11 @@ header{
 
 .header-second{
     width: 100vw;
-    padding: 0px 40px;
-    font-size: 18px;
+    padding: 0px;
+    font-size: 15px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .header-second div{
     display: flex;
@@ -127,12 +131,13 @@ header{
 
 .header-second nav ul {
     display: flex;
-    gap: 44px;
+    gap: 18px;
 }
 .header-second nav ul li{
     list-style: none;
     position: relative;
-
+    padding: 6px 12px;
+    border-radius: 18px;
 }
 
 /* demo */
@@ -163,8 +168,9 @@ header{
 .menu-dropdown ol li{
     width: max-content;
 }
-.header-second nav ul li .menu-dropdown ol li:hover::before{
-    width: 0%;
+.header-second nav ul li .menu-dropdown ol li:hover{
+    background: inherit;
+    color: var(--orange-color);
 }
 
 .menu-dropdown .dropdown-heading{
@@ -195,9 +201,18 @@ header{
     transition: all 0.5s;
     background: var(--orange-color);
 }
-.header-second nav ul li:hover::before{
+/* .header-second nav ul li:hover::before{
     width: 100%;
+} */
+
+.header-second nav ul li:hover{
+    background: var(--orange-color);
 }
+
+.header-second nav ul li:hover a{
+    color: white;
+}
+
 
 
 .header-second .fee-payments{
@@ -273,8 +288,105 @@ header{
 
 
 
+/* footer  */
+footer{
+    background: linear-gradient(135deg, #18181b 0%, #23272f 100%);
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+}
+footer .footer-info{
+    flex: 0.6;
+}
+footer .footer-handler{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 34px;
+    flex: 1;
+    justify-content: space-between;
+}
+footer .footer-handler h2{
+    color: var(--orange-color);
+}
+.d-1 ul li , .d-2 ul li , .d-3 ul li, .d-4 ul li , .d-5 ul li{
+    list-style:  none;
+    padding-top: 12px;
+}
 
 
+
+.d-1 ul a, .d-2 ul a , .d-3 ul a, .d-4 ul a{
+    color: white;
+    text-decoration: none;
+}
+
+footer .footer-handler li a:hover{
+    text-decoration: underline;
+}
+.d-5 ul{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.d-5 ul li a{
+    color: white;
+    background: #000;
+    width: 54px;
+    height: 54px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+
+}
+/* .d-5 ul li  i{
+    width: 24px;
+    height: 24px;
+    padding: 10px;
+} */
+
+
+.d-5 ul li a:hover{
+    text-decoration: none;
+}
+
+.fa-instagram:hover{
+    background: #e4405f;
+}
+
+.fa-x-twitter:hover{
+    background: #1da1f2;
+}
+.fa-youtube:hover{
+    background: #ff0000;
+}
+.fa-linkedin:hover{
+    background: #1877f2;
+}
+
+.fd-1 img{
+    width: 120px;
+    height: 120px;
+}
+
+.fd-1 h1{
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    font-weight: 400 !important;
+}
+.fd-1 h2{
+    padding-top: 3px;
+    letter-spacing: 0px;
+    color: var(--orange-color);
+    font-size: 16px;
+    font-weight: 550;
+}
+.fd-1 iframe{
+    padding-top: 15px;
+    width: 360px;
+    height: 360px;
+}
 
 
 
